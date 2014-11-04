@@ -56,6 +56,12 @@
             
             </section>
 
+            <section  data-background="oneclick.svg" backgroundTransition="slide">
+            
+            </section>
+
+           
+
             <section>
                 <h2>Aim</h2>
                 <ul>
@@ -97,14 +103,157 @@
                 </section>
                 <section>
                     <h1>SASS</h1>
+                    <h3>CSS preprocessor</h3>
+                </section>
+                 <section>
+                    <h1>Variables <small>SASS</small></h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>SASS</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>
+<pre><code>$mainColor: #d3ffd5;
+
+body {
+    color: $mainColor;
+    }
+h1 {
+    color: $mainColor;
+}
+</code></pre>
+                            </td>
+                            <td>
+<pre><code>body {
+  color: #d3ffd5;
+}
+
+h1 {
+  color: #d3ffd5;
+}
+</code></pre>
+                            </td>
+                        </tr>
+                    </table>
+
                 </section>
                 <section>
-                    <h2>Compass
+                    <h1>Nesting <small>SASS</small></h1>
+                       <table style="width: 100%">
+                        <tr>
+                            <th>SASS</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>
+<pre><code>.components {
+  .slider {
+    color: red;
+  }
+  .button {
+    font-size: 12px;
+  }
+}
+
+</code></pre>
+                            </td>
+                            <td>
+<pre><code>.components .slider {
+  color: red;
+}
+.components .button {
+  font-size: 12px;
+}
+</code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+               
+                <section>
+                    <h1>Mixins <small>SASS</small></h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>SASS</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>
+<pre><code>@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box { 
+    @include border-radius(10px); 
+}
+
+</code></pre>
+                            </td>
+                            <td>
+<pre><code>.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+</code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h1>Functions <small>SASS</small></h1>
+                    <ul>
+                        <li class="fragment roll-in">rgba($red, $green, $blue, $alpha)</li>
+                        <li class="fragment roll-in">lighten($color, $amount)</li>
+                        <li class="fragment roll-in">darken($color, $amount)</li>
+                        <li class="fragment roll-in">saturate($color, $amount)</li>
+                        <li class="fragment roll-in">desaturate($color, $amount)</li>
+                        <li class="fragment roll-in">grayscale($color)</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h2>Mixin library       
                         <small>SASS</small>
                     </h2>
+                    <ul>
+                        <li>Compass</li>
+                        <li>Bourbon</li>
+                        <li>Bootstrap</li>
+                        <li>Foundation</li>
+                    </ul>
                 </section>
                 <section>
                     <h1>LESS</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>SASS</th>
+                            <th>LESS</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li class="fragment roll-in">Requires Ruby</li>
+                                    <li class="fragment roll-in">$variable</li>
+                                    <li class="fragment roll-in">for</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li class="fragment roll-in">Node Module</li>
+                                    <li class="fragment roll-in">@variable</li>
+                                    <li class="fragment roll-in">loops</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
                 </section>
             </section>
 
@@ -126,8 +275,7 @@
                         <small>JavaScript</small>
 
                     </h1>
-                    <pre><code>
-function getRandomItems(array, count) {
+<pre><code>function getRandomItems(array, count) {
     var randomArray = [], number;
 
     while (randomArray.length < count) {
@@ -137,8 +285,7 @@ function getRandomItems(array, count) {
     return randomArray;
 };
 </code></pre>
-                    <pre><code>
-function getRandomItems(a, b) {
+<pre><code>function getRandomItems(a, b) {
     var c = [], d;
 
     while (c.length < b) {
@@ -148,7 +295,6 @@ function getRandomItems(a, b) {
     return c;
 };
 </code></pre>
-
 
                 </section>
                 <section>
@@ -265,7 +411,7 @@ function getRandomItems(a, b) {
 
 
 
-            <section>
+            <section data-background="#d3ffd5" >
                 <section>
                     <h1>NodeJs</h1>
                     <h2>Put it together</h2>
@@ -291,8 +437,7 @@ function getRandomItems(a, b) {
 <!-- endbuild -->
                     
 
-</pre>
-                            </code>
+</pre></code>
 
                 </section>
                 <section>
@@ -300,8 +445,7 @@ function getRandomItems(a, b) {
                         <small>NodeJs</small>
                     </h1>
                     Autoprefixer parses CSS and adds vendor-prefixed CSS properties (using the Can I Use database).
-<pre><code>
-options: {
+<pre><code>options: {
   browsers: ['last 2 versions', 'ie 8', 'ie 9']
   }
 }
@@ -345,9 +489,22 @@ options: {
                 </section>
                 <section>
                     <h1>Bower</h1>
+                    <ul>
+                        <li>bower install package</li>
+                        <li>bower.json</li>
+                    </ul>
                 </section>
             </section>
 
+            <section>
+                <h1>Runners</h1>
+                <ul>
+                    <li>Grunt</li>
+                    <li>Gulp</li>
+                    <li>brunch</li>
+                    <li>broccoli</li>
+                </ul>
+            </section>
 
             <section>
                 <section>
@@ -361,14 +518,6 @@ options: {
                         </ul>
                 </section>
 
-                <section>
-                    <ul>
-                        <li>Grunt</li>
-                        <li>Gulp</li>
-                        <li>brunch</li>
-                        <li>broccoli</li>
-                    </ul>
-                </section>
             </section>
             <section>
                 <section>
