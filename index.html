@@ -53,14 +53,12 @@
 
             <section data-background="devgirls.jpg" backgroundTransition="slide">
                 <h1 style="background-color: white; opacity: 0.8;padding: 20px;">What is best developers attribute?</h1>
-            
+
             </section>
 
-            <section  data-background="oneclick.svg" backgroundTransition="slide">
-            
-            </section>
+            <section data-background="oneclick.svg" backgroundTransition="slide">
 
-           
+            </section>
 
             <section>
                 <h2>Aim</h2>
@@ -94,9 +92,6 @@
                 </section>
             </section>
 
-
-
-
             <section data-background="#d3ffd5" data-background-transition="slide">
                 <section>
                     <h1>CSS</h1>
@@ -105,8 +100,10 @@
                     <h1>SASS</h1>
                     <h3>CSS preprocessor</h3>
                 </section>
-                 <section>
-                    <h1>Variables <small>SASS</small></h1>
+                <section>
+                    <h1>Variables
+                        <small>SASS</small>
+                    </h1>
                     <table style="width: 100%">
                         <tr>
                             <th>SASS</th>
@@ -114,7 +111,7 @@
                         </tr>
                         <tr>
                             <td>
-<pre><code>$mainColor: #d3ffd5;
+                                <pre><code>$mainColor: #d3ffd5;
 
 body {
     color: $mainColor;
@@ -125,7 +122,7 @@ h1 {
 </code></pre>
                             </td>
                             <td>
-<pre><code>body {
+                                <pre><code>body {
   color: #d3ffd5;
 }
 
@@ -139,15 +136,17 @@ h1 {
 
                 </section>
                 <section>
-                    <h1>Nesting <small>SASS</small></h1>
-                       <table style="width: 100%">
+                    <h1>Nesting
+                        <small>SASS</small>
+                    </h1>
+                    <table style="width: 100%">
                         <tr>
                             <th>SASS</th>
                             <th>CSS</th>
                         </tr>
                         <tr>
                             <td>
-<pre><code>.components {
+                                <pre><code>.components {
   .slider {
     color: red;
   }
@@ -159,7 +158,7 @@ h1 {
 </code></pre>
                             </td>
                             <td>
-<pre><code>.components .slider {
+                                <pre><code>.components .slider {
   color: red;
 }
 .components .button {
@@ -170,9 +169,11 @@ h1 {
                         </tr>
                     </table>
                 </section>
-               
+
                 <section>
-                    <h1>Mixins <small>SASS</small></h1>
+                    <h1>Mixins
+                        <small>SASS</small>
+                    </h1>
                     <table style="width: 100%">
                         <tr>
                             <th>SASS</th>
@@ -180,7 +181,7 @@ h1 {
                         </tr>
                         <tr>
                             <td>
-<pre><code>@mixin border-radius($radius) {
+                                <pre><code>@mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
@@ -194,7 +195,7 @@ h1 {
 </code></pre>
                             </td>
                             <td>
-<pre><code>.box {
+                                <pre><code>.box {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -207,7 +208,9 @@ h1 {
                     </table>
                 </section>
                 <section>
-                    <h1>Functions <small>SASS</small></h1>
+                    <h1>Functions
+                        <small>SASS</small>
+                    </h1>
                     <ul>
                         <li class="fragment roll-in">rgba($red, $green, $blue, $alpha)</li>
                         <li class="fragment roll-in">lighten($color, $amount)</li>
@@ -220,7 +223,7 @@ h1 {
 
 
                 <section>
-                    <h2>Mixin library       
+                    <h2>Mixin library
                         <small>SASS</small>
                     </h2>
                     <ul>
@@ -240,14 +243,12 @@ h1 {
                         <tr>
                             <td>
                                 <ul>
-                                    <li class="fragment roll-in">Requires Ruby</li>
                                     <li class="fragment roll-in">$variable</li>
                                     <li class="fragment roll-in">for</li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li class="fragment roll-in">Node Module</li>
                                     <li class="fragment roll-in">@variable</li>
                                     <li class="fragment roll-in">loops</li>
                                 </ul>
@@ -275,7 +276,7 @@ h1 {
                         <small>JavaScript</small>
 
                     </h1>
-<pre><code>function getRandomItems(array, count) {
+                    <pre><code>function getRandomItems(array, count) {
     var randomArray = [], number;
 
     while (randomArray.length < count) {
@@ -285,7 +286,7 @@ h1 {
     return randomArray;
 };
 </code></pre>
-<pre><code>function getRandomItems(a, b) {
+                    <pre><code>function getRandomItems(a, b) {
     var c = [], d;
 
     while (c.length < b) {
@@ -411,7 +412,7 @@ h1 {
 
 
 
-            <section data-background="#d3ffd5" >
+            <section data-background="#d3ffd5">
                 <section>
                     <h1>NodeJs</h1>
                     <h2>Put it together</h2>
@@ -420,16 +421,16 @@ h1 {
                     <h1>NodeJs</h1>
                     package.json
                     <pre><code>
-                         npm install module
-                         npm install
+                         $ npm install module
+                         $ npm install
                     </code></pre>
                 </section>
                 <section>
                     <h1>usemin
                         <small>NodeJs</small>
                     </h1>
-                            Find code blocks
-<pre><code><!-- build:js js/app.js -->
+                    Find code blocks
+                    <pre><code><!-- build:js js/app.js -->
 <script src="js/app.js"></script>
 <script src="js/controllers/thing-controller.js"></script>
 <script src="js/models/thing-model.js"></script>
@@ -437,7 +438,8 @@ h1 {
 <!-- endbuild -->
                     
 
-</pre></code>
+</pre>
+                    </code>
 
                 </section>
                 <section>
@@ -445,11 +447,12 @@ h1 {
                         <small>NodeJs</small>
                     </h1>
                     Autoprefixer parses CSS and adds vendor-prefixed CSS properties (using the Can I Use database).
-<pre><code>options: {
+                    <pre><code>options: {
   browsers: ['last 2 versions', 'ie 8', 'ie 9']
   }
 }
-</pre></code>
+</pre>
+                    </code>
                 </section>
                 <section>
                     <h1>concat
@@ -469,17 +472,17 @@ h1 {
                     </h1>
                     adds revision to linked files
 
-<pre><code>{
+                    <pre><code>{
   'img1.png': 'tmp/img1.59bcc3ad.png',
   'img2.png': 'tmp/img2.060b1aa6.png'
 }</code></pre>
                 </section>
-               
+
                 <section>
                     <h1>htmlmin
                         <small>NodeJs</small>
                     </h1>
-                        Minifies HTML using html-minifier.
+                    Minifies HTML using html-minifier.
                 </section>
             </section>
 
@@ -492,18 +495,71 @@ h1 {
                     <ul>
                         <li>bower install package</li>
                         <li>bower.json</li>
+
                     </ul>
+                    <pre><code>$ bower install &lt;package&gt;
+$ bower install jquery</code></pre>
+                </section>
+                <section>
+                    <h1>bower.json</h1>
+                    <pre><code>{
+  "name": "rr",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.16",
+    "es5-shim": "~3.1.0",
+    "angular-sanitize": "1.2.16",
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
+    "angular-resource": "1.2.16",
+    "angular-touch": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-cookies": "1.2.16"
+  },
+  "appPath": "app"
+}
+</code></pre>
+
                 </section>
             </section>
 
             <section>
-                <h1>Runners</h1>
-                <ul>
-                    <li>Grunt</li>
-                    <li>Gulp</li>
-                    <li>brunch</li>
-                    <li>broccoli</li>
-                </ul>
+                <section>
+                    <h1>Runners</h1>
+                    <ul>
+                        <li>Grunt</li>
+                        <li>Gulp</li>
+                        <li>brunch</li>
+                        <li>broccoli</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Grunt</h1>
+                    <h2>grunt-cli</h2>    
+                </section>
+                <section>
+                    <h1>Grunt</h1>
+                    <h2>grunt-cli</h2>    
+                    put the grunt command in your system path
+
+                    <pre><code>$ npm install -g grunt-cli</code></pre>
+                </section>
+                <section>
+                    <h1>Grunt</h1>
+                    <h2>Runner</h2>
+                    <pre><code>$ npm install grunt</code></pre>
+                    
+                </section>
+            <pre><code>
+                npm install -g grunt-init
+
+                grunt-init commonjs
+
+                git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery
+                grunt-init jquery
+            </code></pre>
+
             </section>
 
             <section>
