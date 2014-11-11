@@ -595,9 +595,30 @@ $ bower install jquery --save
                     <ul>
                         <li>Grunt</li>
                         <li>Gulp</li>
-                        <li>brunch</li>
                         <li>broccoli</li>
+                        <li>brunch</li>
+                        <li>cake</li>
+                        <li>jake</li>
+                        <li>mimosa</li>
                     </ul>
+                </section>
+                <section>
+                    <h1>Grunt vs. Gulp</h1>
+                    <table style="width: 60%;margin: auto;">
+                        <tr>
+                            <th>Grunt</th>
+                            <th>Gulp</th>
+                        </tr>
+                        <tr>
+                            <td>task runner</td>
+                            <td>pipeline</td>
+                        </tr>
+                        <tr>
+                            <td>config file</td>
+                            <td>js code</td>
+                        </tr>
+                    </table>
+                    
                 </section>
                 <section>
                     <h1>Grunt</h1>
@@ -608,36 +629,81 @@ $ bower install jquery --save
                     <h2>grunt-cli</h2>
                     put the grunt command in your system path
 
-                    <pre><code>$ npm install -g grunt-cli</code></pre>
+<pre><code data-trim class="sh ruby">
+$ npm install -g grunt-cli
+</code></pre>
                 </section>
+
                 <section>
                     <h1>Grunt</h1>
                     <h2>Runner</h2>
-                    <pre><code> $ npm install grunt</code></pre>
 
-                    <pre><code data-trim class="sh">
+<pre><code data-trim class="sh">
+$ npm install grunt
 $ npm install -g grunt-init
 $ grunt-init commonjs
 $ git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery
-$ grunt-init jquery
-                    </code></pre>
+</code></pre>
                 </section>
 
             </section>
 
             <section>
+                <section data-background="scaffolding.jpg"></section>
+
+                 <section>
+                    <h1>Scaffolding</h1>
+                    <ul>
+                        <li>folder structure</li>
+                        <li>build configuration</li>
+                        <li>generators</li>
+                    </ul>   
+                </section>
+
                 <section>
                     <h1>Scaffolding</h1>
                     <ul>
-                        <li>structure</li>
-                        <li>configuration</li>
-                        <ul>
-                            <li>Yeoman</li>
-                            <li>Ember-cli</li>
-                        </ul>
+                        <li>Yeoman</li>
+                        <li>Ember-cli</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Yeoman <small>Scaffolding</small></h1>
+<pre><code data-trim class="sh">
+$ npm install -g yo
+$ npm install -g generator-angular
+$ yo angular [app-name]
+</code></pre>
+                </section>
+
+                <section>
+                    <h1>Yeoman <small>Scaffolding</small></h1>
+                    <ul>
+                        <li class="folder">app</li>
+                        <li class="folder">bower_components</li>
+                        <li class="folder">node_modules</li>
+                        <li class="folder">test</li>
+                        <li class="file">.bowerrc</li>
+                        <li class="file">.jshintrc</li>
+                        <li class="file">bower.json</li>
+                        <li class="file">Gruntfile.js</li>
+                        <li class="file">package.json</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Yeoman <small>Scaffolding</small></h1>
+<pre><code data-trim class="sh">
+$ grunt serve
+$ grunt build
+$ grunt serve:dist
+$ grunt test
+</code></pre>
                 </section>
 
             </section>
+
             <section>
                 <section>
                     <h1>Testing</h1>
