@@ -7,3 +7,6 @@ mark {
 	background-color: white !important;
 	color: gray;
 }
+.reveal pre {
+	box-shadow: none;
+}

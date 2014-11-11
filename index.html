@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/add.css">
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/syntax.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -44,37 +44,50 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <h1>Web tools</h1>
-                <h3>how to make developers life easier</h3>
-                <mark>
-                    comment
-                </mark>
-            </section>
+                <section>
+                    <h1>Web tools</h1>
+                    <h3>how to make developers life easier</h3>
+                    <mark>
+                        comment
+                    </mark>
+                </section>
 
-            <section data-background="devgirls.jpg" backgroundTransition="slide">
-                <h1 style="background-color: white; opacity: 0.8;padding: 20px;">What is best developers attribute?</h1>
+                <section data-background="devgirls.jpg" backgroundTransition="slide">
+                    <h1 style="background-color: white; opacity: 0.8;padding: 20px;">What is best developers attribute?</h1>
+                </section>
 
-            </section>
-
-            <section data-background="oneclick.svg" backgroundTransition="slide">
-
+                <section data-background="oneclick.svg" backgroundTransition="slide"></section>
             </section>
 
             <section>
-                <h2>Aim</h2>
-                <ul>
-                    <li class="fragment roll-in">Less data on load</li>
-                    <li class="fragment roll-in">Less requests (onload)</li>
-                    <li class="fragment roll-in">Handling of source caching</li>
-                </ul>
-                <ul>
-                    <li class="fragment roll-in">Run project</li>
-                    <li class="fragment roll-in">Orientation in project</li>
-                    <li class="fragment roll-in">Dependecies management</li>
-                    <li class="fragment roll-in">DOCs Autogenerate</li>
-                    <li class="fragment roll-in">TEST enviroment</li>
-                    <li class="fragment roll-in">One click build!</li>
-                </ul>
+                <section>
+                    <h1>Playground</h1>
+                    <ul>
+                        <li class="fragment roll-in">HTML</li>
+                        <li class="fragment roll-in">CSS</li>
+                        <li class="fragment roll-in">Images</li>
+                        <li class="fragment roll-in">JavaScript</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Aim</h1>
+                    <ul>
+                        <li class="fragment roll-in">Less data on load</li>
+                        <li class="fragment roll-in">Less requests (onload)</li>
+                        <li class="fragment roll-in">Handling of source caching</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Secondary AIM</h1>
+                    <ul>
+                        <li class="fragment roll-in">Easy run project</li>
+                        <li class="fragment roll-in">Orientation in project</li>
+                        <li class="fragment roll-in">Dependecies management</li>
+                        <li class="fragment roll-in">DOCs Autogenerate</li>
+                        <li class="fragment roll-in">TEST enviroment</li>
+                    </ul>
+                </section>
             </section>
 
 
@@ -97,13 +110,13 @@
                     <h1>CSS</h1>
                 </section>
                 <section>
-                    <h1>SASS</h1>
+                    <h2>SASS</h2>
                     <h3>CSS preprocessor</h3>
                 </section>
                 <section>
-                    <h1>Variables
+                    <h2>Variables
                         <small>SASS</small>
-                    </h1>
+                    </h2>
                     <table style="width: 100%">
                         <tr>
                             <th>SASS</th>
@@ -111,18 +124,20 @@
                         </tr>
                         <tr>
                             <td>
-                                <pre><code>$mainColor: #d3ffd5;
+<pre><code data-trim class="sass">
+$mainColor: #d3ffd5;
 
 body {
     color: $mainColor;
-    }
+}
 h1 {
     color: $mainColor;
 }
 </code></pre>
                             </td>
                             <td>
-                                <pre><code>body {
+<pre><code data-trim class="css"> 
+body {
   color: #d3ffd5;
 }
 
@@ -146,7 +161,8 @@ h1 {
                         </tr>
                         <tr>
                             <td>
-                                <pre><code>.components {
+<pre><code data-trim class="sass">
+.components {
   .slider {
     color: red;
   }
@@ -158,7 +174,8 @@ h1 {
 </code></pre>
                             </td>
                             <td>
-                                <pre><code>.components .slider {
+<pre><code data-trim class="css">
+.components .slider {
   color: red;
 }
 .components .button {
@@ -181,7 +198,8 @@ h1 {
                         </tr>
                         <tr>
                             <td>
-                                <pre><code>@mixin border-radius($radius) {
+<pre><code data-trim class="sass">
+@mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
@@ -195,13 +213,13 @@ h1 {
 </code></pre>
                             </td>
                             <td>
-                                <pre><code>.box {
+<pre><code data-trim class="css">
+.box {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
-
 </code></pre>
                             </td>
                         </tr>
@@ -211,14 +229,19 @@ h1 {
                     <h1>Functions
                         <small>SASS</small>
                     </h1>
-                    <ul>
-                        <li class="fragment roll-in">rgba($red, $green, $blue, $alpha)</li>
-                        <li class="fragment roll-in">lighten($color, $amount)</li>
-                        <li class="fragment roll-in">darken($color, $amount)</li>
-                        <li class="fragment roll-in">saturate($color, $amount)</li>
-                        <li class="fragment roll-in">desaturate($color, $amount)</li>
-                        <li class="fragment roll-in">grayscale($color)</li>
-                    </ul>
+<pre><code data-trim class="sass">
+rgba($red, $green, $blue, $alpha)
+
+lighten($color, $amount)
+
+darken($color, $amount)
+
+saturate($color, $amount)
+
+desaturate($color, $amount)
+
+grayscale($color)
+</code></pre>
                 </section>
 
 
@@ -256,10 +279,48 @@ h1 {
                         </tr>
                     </table>
                 </section>
+                <section>
+                    <h2>How to reduce size of CSS files?</h2>
+                    <img src="brain.svg" style="display:block;margin:auto;background-color:transparent;border:0;box-shadow: none;">
+                </section>
+                <section>
+                    <h1>Minification <small>CSS</small></h1>
+                    <ul>
+                        <li>Remove whitespaces</li>
+                        <li>Remove last ";"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Output style <small>SASS</small></h1>
+                    <ul>
+                        <li>nested</li>
+                        <li>expanded</li>
+                        <li>compact</li>
+                        <li>compressed</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Output style <small>SASS</small></h1>
+                    <h2>compact</h2>
+<pre><code data-trim  class="css">
+#main { color: #fff; background-color: #000; }
+#main p { width: 10em; }
+.huge { font-size: 10em; font-weight: bold; text-decoration: underline; }
+</code></pre>
+
+<h2>Compressed</h2>
+<pre><code data-trim class="css">
+#main{color:#fff;background-color:#000}#main p{width:10em}.huge{font-size:10em;font-weight:bold;text-decoration:underline}
+</code></pre>
+
+
+                </section>
             </section>
 
-            <section data-background="#d3e9ff" data-background-transition="slide">
 
+
+
+            <section data-background="#d3e9ff" data-background-transition="slide">
                 <section>
                     <h1>JavaScript</h1>
                 </section>
@@ -269,36 +330,7 @@ h1 {
                     <img src="brain.svg" style="display:block;margin:auto;background-color:transparent;border:0;box-shadow: none;">
                 </section>
 
-
-
-                <section>
-                    <h1>minification
-                        <small>JavaScript</small>
-
-                    </h1>
-                    <pre><code>function getRandomItems(array, count) {
-    var randomArray = [], number;
-
-    while (randomArray.length < count) {
-        number = Math.round(Math.random() * array.length);
-        randomArray.push(array[number]);
-    }
-    return randomArray;
-};
-</code></pre>
-                    <pre><code>function getRandomItems(a, b) {
-    var c = [], d;
-
-    while (c.length < b) {
-        d = Math.round(Math.random() * a.length);
-        c.push(a[d]);
-    }
-    return c;
-};
-</code></pre>
-
-                </section>
-                <section>
+                 <section>
                     <h1>minification
                         <small>JavaScript</small>
                     </h1>
@@ -315,6 +347,36 @@ h1 {
                             <li>generate source map</li>
                     </ul>
                 </section>
+
+                <section>
+                    <h1>minification
+                        <small>JavaScript</small>
+
+                    </h1>
+<pre><code class="javascript">function getRandomItems(array, count) {
+    var randomArray = [], number;
+
+    while (randomArray.length < count) {
+        number = Math.round(Math.random() * array.length);
+        randomArray.push(array[number]);
+    }
+    return randomArray;
+};
+</code></pre>
+
+<pre><code class="javascript">function getRandomItems(a, b) {
+    var c = [], d;
+
+    while (c.length < b) {
+        d = Math.round(Math.random() * a.length);
+        c.push(a[d]);
+    }
+    return c;
+};
+</code></pre>
+
+                </section>
+               
                 <section>
                     <h1>minification
                         <small>JavaScript</small>
@@ -370,6 +432,7 @@ h1 {
                         <li>prevention of stupid issues</li>
                         <li>part of coding standard</li>
                         <li>check before minification</li>
+                        <li>prevent issues caused by minification</li>
                     </ul>
                 </section>
                 <section>
@@ -420,7 +483,7 @@ h1 {
                 <section>
                     <h1>NodeJs</h1>
                     package.json
-                    <pre><code>
+                    <pre><code  class="sh">
                          $ npm install module
                          $ npm install
                     </code></pre>
@@ -430,14 +493,12 @@ h1 {
                         <small>NodeJs</small>
                     </h1>
                     Find code blocks
-                    <pre><code><!-- build:js js/app.js -->
-<script src="js/app.js"></script>
-<script src="js/controllers/thing-controller.js"></script>
-<script src="js/models/thing-model.js"></script>
-<script src="js/views/thing-view.js"></script>
-<!-- endbuild -->
-                    
-
+                    <pre><code  class="html"><!-- build:js js/app.js -->
+&gt;script src="js/app.js">&lt;/script>
+&lt;script src="js/controllers/thing-controller.js">&lt;/script>
+&lt;script src="js/models/thing-model.js">&lt;/script>
+&lt;script src="js/views/thing-view.js">&lt;/script>
+&lt;!-- endbuild -->
 </pre>
                     </code>
 
@@ -447,7 +508,7 @@ h1 {
                         <small>NodeJs</small>
                     </h1>
                     Autoprefixer parses CSS and adds vendor-prefixed CSS properties (using the Can I Use database).
-                    <pre><code>options: {
+                    <pre><code  class="json">options: {
   browsers: ['last 2 versions', 'ie 8', 'ie 9']
   }
 }
@@ -472,7 +533,7 @@ h1 {
                     </h1>
                     adds revision to linked files
 
-                    <pre><code>{
+                    <pre><code class="json">{
   'img1.png': 'tmp/img1.59bcc3ad.png',
   'img2.png': 'tmp/img2.060b1aa6.png'
 }</code></pre>
@@ -497,12 +558,12 @@ h1 {
                         <li>bower.json</li>
 
                     </ul>
-                    <pre><code>$ bower install &lt;package&gt;
+                    <pre><code class="sh">$ bower install 'package'
 $ bower install jquery</code></pre>
                 </section>
                 <section>
                     <h1>bower.json</h1>
-                    <pre><code>{
+                    <pre><code  class="json">{
   "name": "rr",
   "version": "0.0.0",
   "dependencies": {
@@ -536,11 +597,11 @@ $ bower install jquery</code></pre>
                 </section>
                 <section>
                     <h1>Grunt</h1>
-                    <h2>grunt-cli</h2>    
+                    <h2>grunt-cli</h2>
                 </section>
                 <section>
                     <h1>Grunt</h1>
-                    <h2>grunt-cli</h2>    
+                    <h2>grunt-cli</h2>
                     put the grunt command in your system path
 
                     <pre><code>$ npm install -g grunt-cli</code></pre>
@@ -548,17 +609,15 @@ $ bower install jquery</code></pre>
                 <section>
                     <h1>Grunt</h1>
                     <h2>Runner</h2>
-                    <pre><code>$ npm install grunt</code></pre>
-                    
+                    <pre><code> $ npm install grunt</code></pre>
+
+                    <pre><code data-trim class="sh">
+$ npm install -g grunt-init
+$ grunt-init commonjs
+$ git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery
+$ grunt-init jquery
+                    </code></pre>
                 </section>
-            <pre><code>
-                npm install -g grunt-init
-
-                grunt-init commonjs
-
-                git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery
-                grunt-init jquery
-            </code></pre>
 
             </section>
 
