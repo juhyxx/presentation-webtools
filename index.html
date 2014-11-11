@@ -44,12 +44,8 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <section>
-                    <h1>Web tools</h1>
-                    <h3>how to make developers life easier</h3>
-                    <mark>
-                        comment
-                    </mark>
+                <section data-background="tools.jpg">
+                    <h1 class="white">Web tools</h1>
                 </section>
 
                 <section data-background="devgirls.jpg" backgroundTransition="slide">
@@ -57,9 +53,7 @@
                 </section>
 
                 <section data-background="oneclick.svg" backgroundTransition="slide"></section>
-            </section>
-
-            <section>
+            
                 <section>
                     <h1>Playground</h1>
                     <ul>
@@ -92,8 +86,8 @@
 
 
             <section data-background="#ffe6bb" data-background-transition="slide">
-                <section>
-                    <h1>HTML</h1>
+                <section  data-background="html.jpg">
+                    <h1 class="white">HTML</h1>
                 </section>
                 <section>
                     <h1>HTML</h1>
@@ -106,8 +100,8 @@
             </section>
 
             <section data-background="#d3ffd5" data-background-transition="slide">
-                <section>
-                    <h1>CSS</h1>
+                <section data-background="css.jpg">
+                    <h1 class="white">CSS</h1>
                 </section>
                 <section>
                     <h2>SASS</h2>
@@ -321,8 +315,8 @@ grayscale($color)
 
 
             <section data-background="#d3e9ff" data-background-transition="slide">
-                <section>
-                    <h1>JavaScript</h1>
+                <section data-background="js.jpg">
+                    <h1 class="white">JavaScript</h1>
                 </section>
 
                 <section>
@@ -400,12 +394,9 @@ grayscale($color)
 
 
             <section data-background="#d3e9ff" data-background-transition="slide">
-                <section>
-                    <h1>Linters</h1>
-                    <h3>Static code control</h3>
-                    <mark>
-                        nemuzete minifikovat bez linteru
-                    </mark>
+                <section data-background="lint.jpg">
+                    <h1 class="white">Linters</h1>
+                    <h3 class="white">Static code control</h3>
                 </section>
                 <section>
                     <h2>JSlint</h2>
@@ -442,9 +433,9 @@ grayscale($color)
             </section>
 
             <section data-background="#d3e9ff">
-                <section>
-                    <h1>Beautifiers</h1>
-                    <h3>Code formatting</h3>
+                <section data-background="beautifier.jpg">
+                    <h1 class="white">Beautifiers</h1>
+                    <h3 class="white">Code formatting</h3>
                 </section>
                 <section>
                     <h1>Beautifiers</h1>
@@ -476,9 +467,9 @@ grayscale($color)
 
 
             <section data-background="#d3ffd5">
-                <section>
-                    <h1>NodeJs</h1>
-                    <h2>Put it together</h2>
+                <section data-background="node.jpg">
+                    <h1 class="white">NodeJs</h1>
+                    
                 </section>
                 <section>
                     <h1>NodeJs</h1>
@@ -548,9 +539,9 @@ grayscale($color)
             </section>
 
             <section>
-                <section>
-                    <h1>Bower</h1>
-                    <h3>Related libs management</h3>
+                <section  data-background="bower.jpg">
+                    <h1 class="white">Bower</h1>
+                    <h3 class="white">Related libs management</h3>
                 </section>
                 <section>
                     <h1>Bower</h1>
@@ -590,6 +581,9 @@ $ bower install jquery --save
             </section>
 
             <section>
+                <section data-background="runners.jpg" >
+                    <h1 class="white">Runners</h1>
+                </section>
                 <section>
                     <h1>Runners</h1>
                     <ul>
@@ -649,7 +643,9 @@ $ git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquer
             </section>
 
             <section>
-                <section data-background="scaffolding.jpg"></section>
+                <section data-background="scaffolding.jpg" >
+                    <h1 class="white">Scaffolding</h1>
+                </section>
 
                  <section>
                     <h1>Scaffolding</h1>
@@ -705,8 +701,8 @@ $ grunt test
             </section>
 
             <section>
-                <section>
-                    <h1>Testing</h1>
+                <section data-background="testing.jpg" >
+                    <h1 class="white">Testing</h1>
                 </section>
                 <section>
                     <h1>Unit <small>testing</small></h1>
@@ -726,8 +722,8 @@ $ grunt test
 
 
             <section>
-                <section>
-                    <h1>CSS Frameworks</h1>
+                <section data-background="framework.jpg">
+                    <h1 class="white">CSS Frameworks</h1>
                 </section>
 
                 <section>
@@ -822,7 +818,7 @@ $ grunt test
         center: true,
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
         // Parallax scrolling
         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
