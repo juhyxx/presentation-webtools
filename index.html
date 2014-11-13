@@ -7,7 +7,7 @@
     <title>Web tools</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="author" content="Miroslav Juhos">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -45,7 +45,7 @@
         <div class="slides">
             <section>
                 <section data-background="tools.jpg">
-                    <h1 class="white">Web tools</h1>
+                    <h1 class="white xtra">Web tools</h1>
                 </section>
 
                 <section data-background="devgirls.jpg" backgroundTransition="slide">
@@ -68,7 +68,7 @@
                     <h1>Aim</h1>
                     <ul>
                         <li class="fragment roll-in">Less data on load</li>
-                        <li class="fragment roll-in">Less requests (onload)</li>
+                        <li class="fragment roll-in">Less requests onload</li>
                         <li class="fragment roll-in">Handling of source caching</li>
                     </ul>
                 </section>
@@ -185,7 +185,7 @@ h1 {
                     <h1>Mixins
                         <small>SASS</small>
                     </h1>
-                    <table style="width: 100%">
+                    <table style="width: 120%">
                         <tr>
                             <th>SASS</th>
                             <th>CSS</th>
@@ -236,6 +236,8 @@ desaturate($color, $amount)
 
 grayscale($color)
 </code></pre>
+
+<a href="http://sassmeister.com">http://sassmeister.com/</a>
                 </section>
 
 
@@ -331,19 +333,20 @@ grayscale($color)
                     <ul>
                         <li>removes
                             <ul>
-                                <li>whitespace</li>
-                                <li>row ends</li>
-                                <li>dead code</li>
-                                <li>comments</li>
-                                <li>unused code</li>
+                                <li class="fragment roll-in">whitespace</li>
+                                <li class="fragment roll-in">row ends</li>
+                                <li class="fragment roll-in">dead code</li>
+                                <li class="fragment roll-in">comments</li>
+                                <li class="fragment roll-in">unused code</li>
+                                <li class="fragment roll-in">semicolons</li>
                             </ul>
-                            <li>mangle (scrambling) variables</li>
-                            <li>generate source map</li>
+                            <li class="fragment roll-in">mangle (scrambling) variables</li>
+                            <li class="fragment roll-in">generate source map</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h1>minification
+                    <h1>mangle
                         <small>JavaScript</small>
 
                     </h1>
@@ -372,7 +375,7 @@ grayscale($color)
                 </section>
                
                 <section>
-                    <h1>minification
+                    <h1>mangle
                         <small>JavaScript</small>
                     </h1>
                     <ul>
@@ -483,9 +486,9 @@ grayscale($color)
                     <h1>usemin
                         <small>NodeJs</small>
                     </h1>
-                    Find code blocks
+                    Search for code blocks
                     <pre><code  class="html"><!-- build:js js/app.js -->
-&gt;script src="js/app.js">&lt;/script>
+&lt;script src="js/app.js">&lt;/script>
 &lt;script src="js/controllers/thing-controller.js">&lt;/script>
 &lt;script src="js/models/thing-model.js">&lt;/script>
 &lt;script src="js/views/thing-view.js">&lt;/script>
@@ -498,10 +501,11 @@ grayscale($color)
                     <h1>autoprefixer
                         <small>NodeJs</small>
                     </h1>
-                    Autoprefixer parses CSS and adds vendor-prefixed CSS properties (using the Can I Use database).
-                    <pre><code  class="json">options: {
-  browsers: ['last 2 versions', 'ie 8', 'ie 9']
-  }
+                    Autoprefixer parses CSS and adds vendor-prefixed CSS properties (using the CanIUse database).
+                    <pre><code class="javascript">{
+    options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+    }
 }
 </pre>
                     </code>
@@ -524,7 +528,7 @@ grayscale($color)
                     </h1>
                     adds revision to linked files
 
-                    <pre><code class="json">{
+                    <pre><code class="javascript">{
   'img1.png': 'tmp/img1.59bcc3ad.png',
   'img2.png': 'tmp/img2.060b1aa6.png'
 }</code></pre>
@@ -546,7 +550,7 @@ grayscale($color)
                 <section>
                     <h1>Bower</h1>
                     
-<pre><code class="sh">
+<pre><code  data-trim class="sh">
 $ bower init
 $ bower install jquery
 $ bower install jquery --save
@@ -614,17 +618,14 @@ $ bower install jquery --save
                     </table>
                     
                 </section>
+               
                 <section>
                     <h1>Grunt</h1>
                     <h2>grunt-cli</h2>
-                </section>
-                <section>
-                    <h1>Grunt</h1>
-                    <h2>grunt-cli</h2>
-                    put the grunt command in your system path
+                   
 
 <pre><code data-trim class="sh ruby">
-$ npm install -g grunt-cli
+$ npm install -g grunt-cli #puts the grunt command
 </code></pre>
                 </section>
 
@@ -633,14 +634,13 @@ $ npm install -g grunt-cli
                     <h2>Runner</h2>
 
 <pre><code data-trim class="sh">
-$ npm install grunt
-$ npm install -g grunt-init
-$ grunt-init commonjs
-$ git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery
+$ npm init                  #creates package.json
+$ npm install grunt --save  #adds grunt to package.json
 </code></pre>
                 </section>
 
             </section>
+
 
             <section>
                 <section data-background="scaffolding.jpg" >
@@ -659,17 +659,37 @@ $ git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquer
                 <section>
                     <h1>Scaffolding</h1>
                     <ul>
+                        <li>grunt-init</li>
                         <li>Yeoman</li>
                         <li>Ember-cli</li>
                     </ul>
                 </section>
 
                 <section>
+                    <h1>Common JS <small>Grunt</small></h1>
+<pre><code data-trim class="sh">
+#run once
+$ npm install -g grunt-init     #grunt init cli
+$ git clone https://github.com/gruntjs/grunt-init-jquery.git \
+     ~/.grunt-init/jquery       #download template
+
+$ grunt-init commonjs           #create a commonjs
+$ npm install                   #install modules from template
+$ grunt                         #run grunt task
+</code></pre>
+                </section>
+
+                <section>
                     <h1>Yeoman <small>Scaffolding</small></h1>
 <pre><code data-trim class="sh">
-$ npm install -g yo
-$ npm install -g generator-angular
-$ yo angular [app-name]
+#run once
+$ npm install -g yo                 #install yeoman
+$ npm install -g generator-angular  #install angular template
+
+$ yo angular [app-name]             #create angular app
+        
+$ npm install                       #node dependencies
+$ bower install                     #bower dependencies
 </code></pre>
                 </section>
 
@@ -690,7 +710,7 @@ $ yo angular [app-name]
 
                 <section>
                     <h1>Yeoman <small>Scaffolding</small></h1>
-<pre><code data-trim class="sh">
+<pre><code data-trim class="sh ruby">
 $ grunt serve
 $ grunt build
 $ grunt serve:dist
@@ -748,16 +768,6 @@ $ grunt test
                     <img src="grid3.svg" style="width:100%;display:block;margin:auto;background-color:transparent;border:0;box-shadow: none;">
                 </section>
 
-                 <section>
-                    <h1>CSS Frameworks</h1>
-                    <ul>
-                        <li><a href="http://www.blueprintcss.org/">Blueprint</a></li>
-                        <li><a href="http://960.gs/">960 grid system</a> <a href="http://unsemantic.com/">(Unsemantic)</a></li>
-                        <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
-                        <li><a href="http://foundation.zurb.com/">Foundation</a></li>
-                    </ul>
-                </section>
-
                 <section>
                     <h1>Grid in code</h1>
                     <pre><code data-trim class="xml">
@@ -774,6 +784,17 @@ $ grunt test
 
 </code></pre>
                 </section>
+                
+                 <section>
+                    <h1>CSS Frameworks</h1>
+                    <ul>
+                        <li><a href="http://www.blueprintcss.org/">Blueprint</a></li>
+                        <li><a href="http://960.gs/">960 grid system</a> <a href="http://unsemantic.com/">(Unsemantic)</a></li>
+                        <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                        <li><a href="http://foundation.zurb.com/">Foundation</a></li>
+                    </ul>
+                </section>
+
 
                 <section>
                      <h1>Bootstrap <small>CSS Frameworks</small></h1>
@@ -812,8 +833,8 @@ $ grunt test
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        controls: true,
-        progress: true,
+        controls: false,
+        progress: false,
         history: true,
         center: true,
 
