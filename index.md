@@ -13,10 +13,9 @@
 
 ---
 
-
 ## AIM
 
-* Less requests onload  <!-- .element: class="fragment roll-in"-->
+* Less requests onload <!-- .element: class="fragment roll-in"-->
 * Less data on load <!-- .element: class="fragment roll-in"-->
 * Handling of source caching <!-- .element: class="fragment roll-in"-->
 
@@ -42,9 +41,9 @@
 ----
 
 ## HTML minify
-* remove useles white spaces
-* extract list of linked file - useminPrepare
-* convert HTML templates to JavaScript
+* remove useles white spaces <!-- .element: class="fragment roll-in"-->
+* extract list of linked file - useminPrepare <!-- .element: class="fragment roll-in"-->
+* convert HTML templates to JavaScript <!-- .element: class="fragment roll-in"-->
 
 ----
 
@@ -68,20 +67,56 @@
 
 ---
 
+# JavaScript
+
+----
+
 ## JavaScript minify
 
 ----
 
 ## Javascript concat
 
-----
-
-
-
+---
 
 # Uglify tricks
 * remove useles white spaces
 * optimalizations ?
 
 
+---
 
+# NodeJS
+
+* Grunt
+* Gulp
+* Broccoli
+
+---
+
+# Grunt
+
+----
+
+## Grunt
+* json config
+
+---
+
+# Gulp
+
+----
+
+## Gulp
+
+* pipeline
+
+---
+
+# Broccoli
+
+----
+
+# Broccoli
+
+* all in memory
