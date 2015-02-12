@@ -1,90 +1,128 @@
-# Build?
+# Web Build?
 
 
 ---
 
 # (MY) Story of web app build
 
-* nobuild
-* custom build
-    - PHP parser
-* Ant
-* Sencha Build
+----
 
----
-
-## AIM
-
-* Less requests onload <!-- .element: class="fragment roll-in"-->
-* Less data on load <!-- .element: class="fragment roll-in"-->
-* Handling of source caching <!-- .element: class="fragment roll-in"-->
-
----
-
-# Solution
-
-* Concat (Less requests onload)
-* Minify (Less data on load)
-
----
-
-# Playground
-
-* HTML
-* CSS
-* JavaScript
-
----
-
-# HTML
+# Nobuild
 
 ----
 
-## HTML minify
-* remove useles white spaces <!-- .element: class="fragment roll-in"-->
-* extract list of linked file - useminPrepare <!-- .element: class="fragment roll-in"-->
-* convert HTML templates to JavaScript <!-- .element: class="fragment roll-in"-->
+# Custom build
 
 ----
 
-## HTML concat
+# Ant
 
-* merge templates
+----
+
+# Sencha Build
 
 ---
 
-# CSS
+
+## LESS <!-- .element: style="display:inline-block;font-size:4em"-->
+* requests  <!-- .element: class="fragment roll-in"-->
+* data <!-- .element: class="fragment roll-in"-->
+
 
 ----
 
-## CSS minify
-* remove whitespaces
-
-----
-
-## CSS concat
-- SASS, LESS
+# Concatenation <!-- .element: class="fragment roll-in"-->
+# Minification <!-- .element: class="fragment roll-in"-->
 
 ---
+
+
+# HTML <!-- .element: class="fragment " style="display:inline-block;font-size:4em"-->&nbsp;
+# CSS <!-- .element: class="fragment " style="display:inline-block;font-size:4em"-->&nbsp;&nbsp;
+# JS <!-- .element: class="fragment " style="display:inline-block;font-size:4em"-->
+
+----
 
 # JavaScript
 
 ----
 
-## JavaScript minify
+
+
+## Minify
+
+- whitespaces
+```
+\t \r \n
+```
+- semicolons
+- remove dead and unused code
 
 ----
 
-## Javascript concat
+## Optimize
+- shorten definition using literals
+``` 
+    var a = new Array(); → var a=[]
+```
+-  optimize property access
+``` 
+    a["foo"] → a.foo
+```
+- evaluate constant expressions
+```
+var hun = 10*10 → var hun = 100 
+```
 
----
+----
+
+## Optimize 2
+
+- join join consecutive statemets
+```
+var x;var y; → var x,y
+```
+
+- optimize boolean operations
+```
+var x = false; → var x=!0
+```
+- optimize conditions
+
+```
+if (this.group) {
+    this.group.remove();
+} → this.group&&this.group.remove(); 
+```
+
+----
+
+## Mangle 
+
+```
+function on(eventName, fn) {
+    this._el.addEventListener(eventName, fn);
+};
+
+function on(n,e){this._el.addEventListener(n,e)}
+```
+
+----
+
 
 # Uglify tricks
 * remove useles white spaces
-* optimalizations ?
+* optimalizations
 
 
 ---
+
+# Into
+
+- stats 
+- lint
+
+----
 
 # NodeJS
 
