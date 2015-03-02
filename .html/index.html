@@ -1,0 +1,149 @@
+<h1 id="web-build">Web Build? <!-- .element: style="font-size:4em"--></h1>
+<hr />
+<h1 id="web-projects-are-bigger-and-bigger">Web projects are bigger and bigger</h1>
+<hr />
+<h1 id="highest-performance">highest performance</h1>
+<ul>
+<li>first user's impression is APP loading time</li>
+</ul>
+<hr />
+<h1 id="less">LESS</h1>
+<ul>
+<li>data</li>
+<li>requests</li>
+</ul>
+<hr />
+<h1 id="concatenation-minification">Concatenation &amp; Minification</h1>
+<p><img src="concat.svg" alt="alt text" /><!-- .element: style="background:transparent;border:0;box-shadow:none;width:100%;"--></p>
+<hr />
+<h1 id="html">HTML</h1>
+<h1 id="css">CSS</h1>
+<h1 id="js">JS</h1>
+<hr />
+<h1 id="prerocessors">Prerocessors</h1>
+<ul>
+<li>SASS</li>
+<li>Compass</li>
+<li>Coffee</li>
+<li>Transpilers</li>
+</ul>
+<hr />
+<h1 id="extras">Extras</h1>
+<h2 id="info">Info</h2>
+<ul>
+<li>size info</li>
+<li>build performace</li>
+</ul>
+<hr />
+<h1 id="extras-1">Extras</h1>
+<h2 id="code">Code</h2>
+<ul>
+<li>static code check (lint)</li>
+<li>strip debug code</li>
+<li>transpiler</li>
+<li>CSS prefixes</li>
+<li>external libs</li>
+</ul>
+<hr />
+<h1 id="extras-2">Extras</h1>
+<h2 id="servers">Servers</h2>
+<ul>
+<li>debug server</li>
+<li>watch</li>
+<li>build test server</li>
+<li>tests</li>
+</ul>
+<hr />
+<h1 id="my-story-of-build">(MY) Story of build</h1>
+<ul>
+<li>No build</li>
+<li>Custom build</li>
+<li>Ant</li>
+<li>Sencha Build</li>
+</ul>
+<hr />
+<hr />
+<h1 id="javascript">JavaScript</h1>
+<hr />
+<h2 id="minify">Minify</h2>
+<ul>
+<li><p>whitespaces</p>
+<pre><code>\t \r \n</code></pre></li>
+<li>semicolons</li>
+<li><p>remove dead and unused code</p></li>
+</ul>
+<hr />
+<h2 id="optimize">Optimize</h2>
+<ul>
+<li><p>shorten definition using literals</p>
+<pre><code>var a = new Array(); → var a=[]</code></pre></li>
+<li><p>optimize property access</p>
+<pre><code>a[&quot;foo&quot;] → a.foo</code></pre></li>
+<li><p>evaluate constant expressions</p>
+<pre><code>var hun = 10*10 → var hun = 100 </code></pre></li>
+</ul>
+<hr />
+<h2 id="optimize-2">Optimize 2</h2>
+<ul>
+<li><p>join join consecutive statemets</p>
+<pre><code>var x;var y; → var x,y</code></pre></li>
+<li><p>optimize boolean operations</p>
+<pre><code>var x = false; → var x=!0</code></pre></li>
+<li><p>optimize conditions</p></li>
+</ul>
+<pre><code>if (this.group) {
+    this.group.remove();
+} → this.group&amp;&amp;this.group.remove(); </code></pre>
+<hr />
+<h2 id="mangle">Mangle</h2>
+<pre><code>function on(eventName, fn) {
+    this._el.addEventListener(eventName, fn);
+};
+
+function on(n,e){this._el.addEventListener(n,e)}</code></pre>
+<hr />
+<h1 id="css-1">CSS</h1>
+<h2 id="preprocess">Preprocess</h2>
+<ul>
+<li>SASS</li>
+<li>LESS</li>
+<li><h2 id="stylus">Stylus</h2></li>
+<li>minify</li>
+<li>concat</li>
+<li>autoprefixing</li>
+</ul>
+<hr />
+<h1 id="tools">Tools</h1>
+<p>UglifyJS Autoprefixer</p>
+<hr />
+<h1 id="nodejs">NodeJS</h1>
+<ul>
+<li>Grunt</li>
+<li>Gulp</li>
+<li>Broccoli</li>
+</ul>
+<hr />
+<h1 id="grunt">Grunt</h1>
+<hr />
+<h2 id="grunt-1">Grunt</h2>
+<ul>
+<li>json config</li>
+</ul>
+<hr />
+<h1 id="gulp">Gulp</h1>
+<hr />
+<h2 id="gulp-1">Gulp</h2>
+<ul>
+<li><p>pipeline</p></li>
+<li>task</li>
+<li>watch</li>
+<li>src</li>
+<li><p>dest</p></li>
+</ul>
+<hr />
+<h1 id="broccoli">Broccoli</h1>
+<hr />
+<h1 id="broccoli-1">Broccoli</h1>
+<ul>
+<li>all in memory</li>
+</ul>

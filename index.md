@@ -1,45 +1,75 @@
-# Web Build?
+# Web Build?  <!-- .element: style="font-size:4em"-->
+
+----
+
+# Web projects are bigger and bigger
+
+----
+
+# Highest performance 
+- first user's impression is APP loading time
+
+
+----
+
+
+# LESS 
+* data 
+* requests  
 
 
 ---
 
-# (MY) Story of web app build
+# Concatenation
+# Minification 
 
 ----
 
-# Nobuild
+## Concatenation & Minification 
+![alt text](concat.svg)<!-- .element: style="background:transparent;border:0;box-shadow:none;width:100%;"-->
+
 
 ----
 
-# Custom build
+
+## Prerocessors
+![alt text](preprocess.svg)<!-- .element: style="background:transparent;border:0;box-shadow:none;width:100%;"-->
+
 
 ----
 
-# Ant
+## Info
+
+![alt text](extras.svg)<!-- .element: style="background:transparent;border:0;box-shadow:none;width:100%;"-->
+
 
 ----
 
-# Sencha Build
+## Test
+![alt text](browser.svg)<!-- .element: style="background:transparent;border:0;box-shadow:none;width:100%;"-->
+
 
 ---
 
 
-## LESS <!-- .element: style="display:inline-block;font-size:4em"-->
-* requests  <!-- .element: class="fragment roll-in"-->
-* data <!-- .element: class="fragment roll-in"-->
 
+# (MY) Story of build
 
-----
-
-# Concatenation <!-- .element: class="fragment roll-in"-->
-# Minification <!-- .element: class="fragment roll-in"-->
+* No build
+* Custom build
+* Ant
+* Sencha Build
 
 ---
 
+# HTML 
+# CSS
+# JS 
 
-# HTML <!-- .element: class="fragment " style="display:inline-block;font-size:4em"-->&nbsp;
-# CSS <!-- .element: class="fragment " style="display:inline-block;font-size:4em"-->&nbsp;&nbsp;
-# JS <!-- .element: class="fragment " style="display:inline-block;font-size:4em"-->
+
+---
+
+# Minification
 
 ----
 
@@ -47,9 +77,7 @@
 
 ----
 
-
-
-## Minify
+## Minification -JavaScript
 
 - whitespaces
 ```
@@ -60,7 +88,7 @@
 
 ----
 
-## Optimize
+### Optimize
 - shorten definition using literals
 ``` 
     var a = new Array(); → var a=[]
@@ -76,7 +104,7 @@ var hun = 10*10 → var hun = 100
 
 ----
 
-## Optimize 2
+### Optimize 2
 
 - join join consecutive statemets
 ```
@@ -97,7 +125,7 @@ if (this.group) {
 
 ----
 
-## Mangle 
+### Mangle 
 
 ```
 function on(eventName, fn) {
@@ -109,20 +137,41 @@ function on(n,e){this._el.addEventListener(n,e)}
 
 ----
 
+# CSS
 
-# Uglify tricks
-* remove useles white spaces
-* optimalizations
+----
+
+## CSS minification
+
+- white space
+- merge margin, border, padding
+- simplification constructions 
+
+        a {
+            color: red;
+        }
+
+        a {color: red}
+
+----
+
+## CSS Preprocess
+- SASS
+- LESS
+- Stylus
+
+----
+
+# HTML
+
+     <input type="text" disabled="disabled">
+
+     <input type=text disabled>
+
+
 
 
 ---
-
-# Into
-
-- stats 
-- lint
-
-----
 
 # NodeJS
 
@@ -148,6 +197,12 @@ function on(n,e){this._el.addEventListener(n,e)}
 ## Gulp
 
 * pipeline
+
+
+- task
+- watch
+- src
+- dest
 
 ---
 
