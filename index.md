@@ -306,7 +306,7 @@ function on(n,e){this._el.addEventListener(n,e)}
         'concurrent:dist',
         'autoprefixer',
         'concat',
-        'copy:dist',o
+        'copy:dist',
         'cssmin',
         'uglify',
         'usemin',
